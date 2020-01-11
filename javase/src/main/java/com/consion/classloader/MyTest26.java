@@ -1,5 +1,9 @@
 package com.consion.classloader;
 
+import java.sql.Driver;
+import java.util.Iterator;
+import java.util.ServiceLoader;
+
 /**
  * 线程上下文类加载器的一般使用模式（获取-使用-还原）
  * ClassLoader classLoader = Thread.currentThread().getContextClassLoader();//获取当前线程上下文类加载器-（获取）
@@ -21,6 +25,13 @@ package com.consion.classloader;
  */
 public class MyTest26 {
     public static void main(String[] args) {
-
+        ServiceLoader<Driver> loader = ServiceLoader.load(Driver.class);
+        Iterator<Driver> iterator = loader.iterator();
+        while (iterator.hasNext()) {
+            Driver driver = iterator.next();
+            System.out.println("driver:" + driver.getClass() + ", loader:" + driver.getClass().getClassLoader());
+        }
+        //META-INF/services目录下会存放名称为服务类型（java.sql.Driver），文件中的内容为服务提供者的具体驱动限定名（com.mysql.jdbc.xx）
+        System.out.println("线程上下文类加载器：" + Thread.currentThread().getContextClassLoader());
     }
 }
