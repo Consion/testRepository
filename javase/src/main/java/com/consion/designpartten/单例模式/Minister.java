@@ -1,4 +1,4 @@
-package com.consion.designpartten.asingleton;
+package com.consion.designpartten.单例模式;
 
 /**
  * 臣子类，和皇帝是1：n的关系

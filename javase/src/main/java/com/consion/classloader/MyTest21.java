@@ -16,6 +16,9 @@ public class MyTest21 {
         //都由应用类加载器加载，所以结果为true
         System.out.println(clazz1 == clazz2);
 
+        System.out.println(clazz1.getClassLoader());
+        System.out.println(clazz2.getClassLoader());
+
         Method method = clazz1.getMethod("setMyPerson", Object.class) ;
         Object obj1 = clazz1.newInstance();
         Object obj2 = clazz2.newInstance();

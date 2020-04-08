@@ -5,8 +5,8 @@ package com.consion.classloader;
  */
 public class MyTest18 {
     public static void main(String[] args) {
-        System.out.println(System.getProperty("sun.boot.class.path"));
-        System.out.println(System.getProperty("java.ext.dirs"));
-        System.out.println(System.getProperty("java.class.path"));
+        System.out.println(System.getProperty("sun.boot.class.path"));//对应的是根类加载器
+        System.out.println(System.getProperty("java.ext.dirs"));//对应的是扩展类加载器
+        System.out.println(System.getProperty("java.class.path"));//对应的是应用类加载器
     }
 }

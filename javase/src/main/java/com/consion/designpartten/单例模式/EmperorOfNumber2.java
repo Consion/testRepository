@@ -1,4 +1,4 @@
-package com.consion.designpartten.asingleton;
+package com.consion.designpartten.单例模式;
 
 import java.util.ArrayList;
 import java.util.List;

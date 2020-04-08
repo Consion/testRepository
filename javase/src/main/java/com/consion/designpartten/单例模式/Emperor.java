@@ -1,4 +1,4 @@
-package com.consion.designpartten.asingleton;
+package com.consion.designpartten.单例模式;
 
 /**
  * 皇帝类，因为事间只有一个皇帝，所以要设计成单例类
