@@ -1,11 +1,18 @@
-package com.consion.designpartten.中介者模式;
+package com.consion.designpartten.中介者模式.通过中介者模式实现;
 
 
-
-public class Stock {
+public class Stock extends AbstractColeague{
+    AbstractMediator abstractMediator;
     //初始库存
     private static int computerNumber = 100;
 
+    public Stock(AbstractMediator abstractMediator) {
+        super(abstractMediator);
+    }
+
+    public void clearStock() {
+        super.abstractMediator.execute("stock.clear");
+    }
 
     //增加库存
     public void increase(int number) {
@@ -24,15 +31,5 @@ public class Stock {
         return computerNumber;
     }
 
-    //库存压力大，通知销售人员尽快销售，采购人员停止采购
-    public void clearStock() {
-        Purchase purchase = new Purchase();
-        Sale sale = new Sale();
-        System.out.println("清理存货数量为：" + computerNumber);
-        //要求打折销售
-        sale.offSale();
-        //采购人员停止采购
-        purchase.refuseBuyIBM();
-    }
 
 }

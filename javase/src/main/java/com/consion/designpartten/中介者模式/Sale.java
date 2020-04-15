@@ -1,14 +1,9 @@
 package com.consion.designpartten.中介者模式;
 
-import com.consion.designpartten.中介者模式.通过中介者模式实现.AbstractMediator;
 
 import java.util.Random;
 
 public class Sale {
-
-    public Sale(AbstractMediator abstractMediator) {
-    }
-
     public void saleIBMComputer(int number) {
         //访问库存
         Stock stock = new Stock();

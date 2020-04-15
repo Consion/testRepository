@@ -1,10 +1,6 @@
 package com.consion.designpartten.中介者模式;
 
-import com.consion.designpartten.中介者模式.通过中介者模式实现.AbstractMediator;
-
 public class Purchase {
-    public Purchase(AbstractMediator abstractMediator) {
-    }
 
     public void buyIBMComputer(int number) {
         //访问库存

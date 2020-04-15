@@ -6,7 +6,7 @@ package com.consion.designpartten.工厂方法模式;
  */
 public class HumanFactory extends AbstractHumanFactory {
     @Override
-    public <T extends Human> T createHnman(Class<T> c) {
+    public <T extends Human> T createHuman(Class<T> c) {
         T human = null;
         try {
            human = c.newInstance();
@@ -14,5 +14,10 @@ public class HumanFactory extends AbstractHumanFactory {
             e.printStackTrace();
         }
         return human;
+    }
+
+    @Override
+    public Human createHuman(HumanTypeEnum humanTypeEnum) {
+        return createHuman(humanTypeEnum.getType());
     }
 }

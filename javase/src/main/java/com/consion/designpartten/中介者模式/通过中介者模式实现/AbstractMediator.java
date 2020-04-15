@@ -1,8 +1,6 @@
 package com.consion.designpartten.中介者模式.通过中介者模式实现;
 
-import com.consion.designpartten.中介者模式.Purchase;
-import com.consion.designpartten.中介者模式.Sale;
-import com.consion.designpartten.中介者模式.Stock;
+
 
 public abstract class AbstractMediator {
     protected Sale sale;
